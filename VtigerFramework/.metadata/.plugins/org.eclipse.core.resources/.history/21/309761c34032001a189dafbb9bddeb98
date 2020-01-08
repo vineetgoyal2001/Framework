@@ -8,7 +8,6 @@ import utilities.Base;
 public class Login extends Base {
 	
 	public void loginToApplication() {
-		   //first
 	        	
 			try {
 				genericobj.setTextboxValue("user_name","uname");
