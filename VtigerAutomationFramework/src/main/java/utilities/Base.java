@@ -1,6 +1,5 @@
 package utilities;
 import java.io.File;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -8,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -53,13 +53,13 @@ public class Base {
 		}
 		}
 	
+
 	@BeforeMethod
 	public void applicationSetup() {		
 	    try {
 	    	browsername.setupBrowser(configobject.getConfigData("browser"));
 			genericobj.openurl("url");
-		//	loginobj.loginToApplication();
-		} catch (Exception e) {
+			} catch (Exception e) {
 			logger.log(Status.FAIL,"Not able to setup application");
 			Assert.assertTrue(false, "Not able to setup application");
 		}

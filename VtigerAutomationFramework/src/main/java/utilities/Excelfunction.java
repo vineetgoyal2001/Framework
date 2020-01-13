@@ -9,9 +9,10 @@ public class Excelfunction {
 	
    public static void main(String[] args) throws IOException {
 	
-	   readFile();
-	  // columnCount();
-	  // cellVal();
+ 	  // readFile();
+	  //  rowCount();
+	     columnCount();
+	  //   cellVal();
 }
 	
 	
@@ -33,7 +34,6 @@ public class Excelfunction {
 		
 		String filepath=System.getProperty("user.dir")+"/Data/TestData.csv";
 	    BufferedReader br = new BufferedReader(new FileReader(filepath));
-
 	     String input;
 	     int count = 0;
 	     while((input = br.readLine()) != null)
@@ -49,14 +49,13 @@ public class Excelfunction {
 		String filepath=System.getProperty("user.dir")+"/Data/TestData.csv";
 	    BufferedReader br = new BufferedReader(new FileReader(filepath));
 
-	     Stream<String> input;
-	     int count = 0;
-	     while((input = br.lines()) != null)
-	     {
-	         count++;
-	     }
-
-	     System.out.println("Count : "+count);
+	     int colcount = 0;
+	     
+	     String input =br.readLine();
+	     
+	      String [] columns=input.split(",");   
+	      colcount=columns.length;
+	      System.out.println("Count : "+colcount);
 	}
 
 	public static void cellVal() throws IOException {

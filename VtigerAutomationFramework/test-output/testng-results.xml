@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="92205" started-at="2020-01-11T20:29:42 GMT" finished-at="2020-01-11T20:31:14 GMT">
+  <suite name="Default suite" duration-ms="40415" started-at="2020-01-11T22:57:06 GMT" finished-at="2020-01-11T22:57:47 GMT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="92205" started-at="2020-01-11T20:29:42 GMT" finished-at="2020-01-11T20:31:14 GMT">
+    <test name="Default test" duration-ms="40415" started-at="2020-01-11T22:57:06 GMT" finished-at="2020-01-11T22:57:47 GMT">
       <class name="com.vtiger.testcases.VtigerSmokeTestCases">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="setup" is-config="true" duration-ms="553" started-at="2020-01-11T20:29:41 GMT" finished-at="2020-01-11T20:29:42 GMT">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="setup" is-config="true" duration-ms="100" started-at="2020-01-11T22:57:06 GMT" finished-at="2020-01-11T22:57:06 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="applicationSetup()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="applicationSetup" is-config="true" duration-ms="34869" started-at="2020-01-11T20:29:42 GMT" finished-at="2020-01-11T20:30:17 GMT">
+        <test-method status="PASS" signature="applicationSetup()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="applicationSetup" is-config="true" duration-ms="10893" started-at="2020-01-11T22:57:06 GMT" finished-at="2020-01-11T22:57:17 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applicationSetup -->
-        <test-method status="PASS" signature="createLead()[pri:1, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="createLead" duration-ms="35320" started-at="2020-01-11T20:30:17 GMT" finished-at="2020-01-11T20:30:52 GMT">
+        <test-method status="PASS" signature="createLead()[pri:1, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="createLead" duration-ms="10989" started-at="2020-01-11T22:57:17 GMT" finished-at="2020-01-11T22:57:28 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLead -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="tearDownMethod" is-config="true" duration-ms="8" started-at="2020-01-11T20:30:52 GMT" finished-at="2020-01-11T20:30:52 GMT">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="tearDownMethod" is-config="true" duration-ms="6" started-at="2020-01-11T22:57:28 GMT" finished-at="2020-01-11T22:57:28 GMT">
           <params>
             <param index="0">
               <value>
@@ -30,15 +30,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="applicationSetup()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="applicationSetup" is-config="true" duration-ms="10618" started-at="2020-01-11T20:30:52 GMT" finished-at="2020-01-11T20:31:03 GMT">
+        <test-method status="PASS" signature="applicationSetup()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="applicationSetup" is-config="true" duration-ms="10152" started-at="2020-01-11T22:57:28 GMT" finished-at="2020-01-11T22:57:38 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applicationSetup -->
-        <test-method status="PASS" signature="leadData()[pri:2, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="leadData" duration-ms="11309" started-at="2020-01-11T20:31:03 GMT" finished-at="2020-01-11T20:31:14 GMT">
+        <test-method status="PASS" signature="leadData()[pri:2, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="leadData" duration-ms="8331" started-at="2020-01-11T22:57:38 GMT" finished-at="2020-01-11T22:57:47 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leadData -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2020-01-11T20:31:14 GMT" finished-at="2020-01-11T20:31:14 GMT">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2020-01-11T22:57:47 GMT" finished-at="2020-01-11T22:57:47 GMT">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="finalReport()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="finalReport" is-config="true" duration-ms="547" started-at="2020-01-11T20:31:14 GMT" finished-at="2020-01-11T20:31:15 GMT">
+        <test-method status="PASS" signature="finalReport()[pri:0, instance:com.vtiger.testcases.VtigerSmokeTestCases@167fdd33]" name="finalReport" is-config="true" duration-ms="319" started-at="2020-01-11T22:57:47 GMT" finished-at="2020-01-11T22:57:47 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalReport -->
