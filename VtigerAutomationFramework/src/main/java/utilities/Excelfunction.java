@@ -5,16 +5,37 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-public class Excelfunction {
+public class Excelfunction extends Base {
 	
    public static void main(String[] args) throws IOException {
-	
- 	  // readFile();
-	  //  rowCount();
-	     columnCount();
-	  //   cellVal();
+	   
+	  // Excelfunction.getExecutableTestCaseCount();
+	   Excelfunction.columnCount();
 }
 	
+	public  static int getExecutableTestCaseCount() throws IOException {
+		String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcases.csv";
+	    BufferedReader br = new BufferedReader(new FileReader(filepath));
+	    br.readLine();
+	    int count=0;
+	  //  ArrayList< String >lines = new ArrayList<String>();
+	    String newLine;
+            while ((newLine = br.readLine()) != null) {
+	        System.out.println(newLine);
+	     //   lines.add(newLine);	  
+	        String[] data=newLine.split(",");
+	        if(data[0].equals("y")) {
+	        	
+	        	count++;
+	        	
+	        }
+	        System.out.println(count);
+	        
+	   }return count;
+		        
+            
+	 }
+
 	
 	@SuppressWarnings("resource")
 	
@@ -44,9 +65,9 @@ public class Excelfunction {
 	     System.out.println("Count : "+count);
 	}
 	
-	public static void columnCount() throws IOException {
+	public static int columnCount() throws IOException {
 		
-		String filepath=System.getProperty("user.dir")+"/Data/TestData.csv";
+		String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcases.csv";
 	    BufferedReader br = new BufferedReader(new FileReader(filepath));
 
 	     int colcount = 0;
@@ -56,17 +77,21 @@ public class Excelfunction {
 	      String [] columns=input.split(",");   
 	      colcount=columns.length;
 	      System.out.println("Count : "+colcount);
+		return colcount;
 	}
 
 	public static void cellVal() throws IOException {
 		
-		String filepath=System.getProperty("user.dir")+"/Data/TestData.csv";
-	    BufferedReader br = new BufferedReader(new FileReader(filepath));
+		String filepath=System.getProperty("user.dir")+"/Data/testcases.csv";
+	    @SuppressWarnings("resource")
+		BufferedReader br = new BufferedReader(new FileReader(filepath));
 	    String line;
 	    while ((line = br.readLine()) != null) {
 	        // use comma as separator
-	        String[] cols = line.split(line);
-	        System.out.println("Coulmn 4= " + cols[4] + " , Column 5=" + cols[5]);
+	        String[] cols = line.split(",");
+	    //    for(int i=0;i<cols.length;i++) {
+	        	System.out.println(cols[0]);
+	    //    }
 	    }
 	}
 

@@ -31,7 +31,8 @@ public class Base {
 	public static ExtentReports report;
 	public static ExtentTest logger;
 	public static ExtentHtmlReporter extent;
-	
+	public static Excelfunction excelobj;
+	public static TestCasesReader testcaseobj;
 		
 	@BeforeSuite
 	public void setup(){ 
@@ -43,6 +44,8 @@ public class Base {
 			browsername=new BrowserFactory();
 			loginobj=new Login(); 
 			homeobj=new Home();
+			excelobj=new Excelfunction();
+			testcaseobj=new TestCasesReader();
 			CSS=new CaptureScreenShot();
 			extent=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Report/Vtiger"+CSS.getCurrentDateTime()+".html"));
             report=new ExtentReports();
