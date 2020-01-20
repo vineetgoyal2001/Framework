@@ -7,12 +7,7 @@ import java.util.stream.Stream;
 
 public class Excelfunction extends Base {
 	
-   public static void main(String[] args) throws IOException {
-	   
-	  // Excelfunction.getExecutableTestCaseCount();
-	   Excelfunction.columnCount();
-}
-	
+  
 	public  static int getExecutableTestCaseCount() throws IOException {
 		String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcases.csv";
 	    BufferedReader br = new BufferedReader(new FileReader(filepath));
@@ -21,15 +16,16 @@ public class Excelfunction extends Base {
 	  //  ArrayList< String >lines = new ArrayList<String>();
 	    String newLine;
             while ((newLine = br.readLine()) != null) {
-	        System.out.println(newLine);
+	     //   System.out.println(newLine);
 	     //   lines.add(newLine);	  
 	        String[] data=newLine.split(",");
 	        if(data[0].equals("y")) {
+	        	//System.out.println(newLine);
 	        	
 	        	count++;
-	        	
+	        	//System.out.println("Count:"+count);
 	        }
-	        System.out.println(count);
+	       // System.out.println(count);
 	        
 	   }return count;
 		        
@@ -62,7 +58,7 @@ public class Excelfunction extends Base {
 	         count++;
 	     }
 
-	     System.out.println("Count : "+count);
+	   //  System.out.println("Count : "+count);
 	}
 	
 	public static int columnCount() throws IOException {
@@ -76,7 +72,7 @@ public class Excelfunction extends Base {
 	     
 	      String [] columns=input.split(",");   
 	      colcount=columns.length;
-	      System.out.println("Count : "+colcount);
+	    //  System.out.println("Column Count: "+colcount);
 		return colcount;
 	}
 

@@ -33,6 +33,8 @@ public class Base {
 	public static ExtentHtmlReporter extent;
 	public static Excelfunction excelobj;
 	public static TestCasesReader testcaseobj;
+	public static TestCasesSteps testcasestepobj;
+	public static Keywordlibrary keywordlibraryobj; 
 		
 	@BeforeSuite
 	public void setup(){ 
@@ -86,8 +88,7 @@ public class Base {
 	}
 
 	@AfterMethod
-	
-	public static void tearDownMethod(ITestResult result) {
+		public static void tearDownMethod(ITestResult result) {
 		String str_SSpath;
 		if (ITestResult.FAILURE == result.getStatus()) {
 			try {
@@ -108,6 +109,7 @@ public class Base {
 	@AfterSuite
 	public static void finalReport() {
 		report.flush();
+		//driver.close();
 	}
 	
 }

@@ -26,6 +26,18 @@ public class GenericMethod extends Base{
 		}
 	}
 	
+	
+	public void closebrowser() {
+		try {
+			driver.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			logger.log(Status.FAIL,"Not able to open the url");
+			Assert.assertTrue(false, "Not able to open the url");
+		}
+	}
+
+	
 	 public void validateIsEnabled(String objkey) {
 		 try {
 			testobject.getObject(objkey).isEnabled();

@@ -6,37 +6,39 @@ import java.io.IOException;
 
 public class TestCasesReader extends Base{
 	
-	public static void main(String[] args) throws IOException {
-		readTestCasecsv1();
-		
-	}
-	
-	
-	public static Object[][] readTestCasecsv() throws IOException{
+		public Object[][] readTestCasecsv() throws IOException{
 		int rownum=0;
 		String[] data;
+		Object[][] arr;
+		BufferedReader br;
+		
 		int rowcount=Excelfunction.getExecutableTestCaseCount();
 		int columncount =Excelfunction.columnCount();
-		Object[][] arr=new Object[rowcount][columncount]; 
+		arr = new Object[rowcount][columncount]; 
 		String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcases.csv";
-		BufferedReader br = new BufferedReader(new FileReader(filepath));
-		br.readLine();
-		String newLine;
-	        while ((newLine = br.readLine()) != null) 
-		   {	data = newLine.split(",");
-		        if(data[0]=="y") 
-			    {for(int column=0;column<columncount;column++) 
-				{
-					arr[rownum][column]=data[column];
-	          		}       
-				rownum++;			}
-			newLine=null;
-			data =null;
+		br = new BufferedReader(new FileReader(filepath));
+
+		try {
+			br.readLine();
+			String newLine;
+			    while ((newLine = br.readLine()) != null) 
+			   {	data = newLine.split(",");
+			        if(data[0].equalsIgnoreCase("y")) 
+				    {for(int column=0;column<columncount;column++) 
+					{
+						arr[rownum][column]=data[column];
+			      		}       
+					rownum++;			}
+				newLine=null;
+				data =null;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} 
 		br.close();
-		return arr;	}
-	
-	
+		return arr;	}	
+		
 	public static Object[][] readTestCasecsv1() throws IOException{
 		int rowcount=Excelfunction.getExecutableTestCaseCount();
 		int columncount=Excelfunction.columnCount();			
@@ -47,7 +49,8 @@ public class TestCasesReader extends Base{
 	    String newLine;
         while ((newLine = br.readLine()) != null) {
 	        System.out.println(newLine);
-	   	  }     
+	   	  }  
+        
         int rownum=0;
         for(int column=0;column<columncount;column++  ) {
 	        if(newLine=="y") {

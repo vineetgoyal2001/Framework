@@ -4,7 +4,7 @@ import utilities.Base;
 
 public class VtigerSmokeTestCases extends Base {
 		
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void createLead()
 	{ 
 		logger =report.createTest("Create Lead");
@@ -20,7 +20,7 @@ public class VtigerSmokeTestCases extends Base {
 		// third commit
 	}
    
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void leadData()
 	{  
 		logger =report.createTest("Lead_data");
