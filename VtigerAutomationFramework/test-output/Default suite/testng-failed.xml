@@ -3,16 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vtiger.testcases.VtigerSmokeTestCases">
+      <class name="com.vtiger.driver.DriverScript">
         <methods>
           <include name="tearDownMethod"/>
           <include name="finalReport"/>
-          <include name="leadData"/>
           <include name="setup"/>
           <include name="applicationSetup"/>
-          <include name="createLead"/>
+          <include name="testcaseExecute" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.vtiger.testcases.VtigerSmokeTestCases -->
+      </class> <!-- com.vtiger.driver.DriverScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -12,12 +12,9 @@ public class VtigerSmokeTestCases extends Base {
 		logger.pass("Login sucessfully");
 		homeobj.createLeads();
 		logger.pass("Marketing Leads are created successfully");
-		logout();
+		logoutobj.logout();
 		logger.pass("Logout successfully");
 		driver.quit();
-		// First commit	
-		//Second commit
-		// third commit
 	}
    
 	//@Test(priority=2)
@@ -26,7 +23,7 @@ public class VtigerSmokeTestCases extends Base {
 		logger =report.createTest("Lead_data");
 		loginobj.loginToApplication();
 		homeobj.createLeads();
-		logout();
+		logoutobj.logout();
 		logger.pass("Lead created successfully");
 		driver.quit();	
 	}

@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.testng.Assert;
+
+import com.aventstack.extentreports.Status;
+
 public class TestCasesReader extends Base{
 	
 		public Object[][] readTestCasecsv() throws IOException{
@@ -33,11 +37,12 @@ public class TestCasesReader extends Base{
 				data =null;
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Status.FAIL,"Not able to read test cases");
+			Assert.assertTrue(false, "Not able to read test cases");
 		} 
 		br.close();
-		return arr;	}	
+		return arr;	
+		}	
 		
 	public static Object[][] readTestCasecsv1() throws IOException{
 		int rowcount=Excelfunction.getExecutableTestCaseCount();
@@ -57,9 +62,7 @@ public class TestCasesReader extends Base{
 	        	System.out.println(newLine);
             rownum++;
           }       
-        
-}
+        }
 		return arr;
-		
-   }
+	   }
 }

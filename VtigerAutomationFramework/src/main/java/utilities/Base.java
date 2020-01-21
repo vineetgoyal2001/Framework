@@ -7,16 +7,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 import pages.Home;
 import pages.Login;
+import pages.Logout;
+
 public class Base {
 	
 	public static TestDataReader testdata;
@@ -25,6 +24,7 @@ public class Base {
 	public static WebDriver driver;
 	public static BrowserFactory browsername;
 	public static Login loginobj;
+	public static Logout logoutobj;
 	public static GenericMethod genericobj;
 	public static Home homeobj;
 	public static CaptureScreenShot CSS;
@@ -33,8 +33,9 @@ public class Base {
 	public static ExtentHtmlReporter extent;
 	public static Excelfunction excelobj;
 	public static TestCasesReader testcaseobj;
-	public static TestCasesSteps testcasestepobj;
 	public static Keywordlibrary keywordlibraryobj; 
+	public static TestCasesSteps testcasestepobj;
+	
 		
 	@BeforeSuite
 	public void setup(){ 
@@ -48,6 +49,7 @@ public class Base {
 			homeobj=new Home();
 			excelobj=new Excelfunction();
 			testcaseobj=new TestCasesReader();
+			keywordlibraryobj=new Keywordlibrary();
 			CSS=new CaptureScreenShot();
 			extent=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Report/Vtiger"+CSS.getCurrentDateTime()+".html"));
             report=new ExtentReports();
@@ -69,23 +71,6 @@ public class Base {
 			Assert.assertTrue(false, "Not able to setup application");
 		}
 	  }
-	
-
-	public void logout() {
-		try {
-			genericobj.clickwe("signout_xpath");
-			genericobj.clearfield("user_name");
-			String explogout=testobject.getObject("LogoutVerification").getAttribute("alt");
-			String actlogout=testdata.getData("vallogout");
-			if(explogout.equals(actlogout))
-				   System.out.println("Logout is verified successfully");
-			else
-				   	System.out.println("Logout verification is failed");
-		} catch (Exception e) {
-			logger.log(Status.FAIL,"Not able to logout");
-			Assert.assertTrue(false, "Not able to logout");
-		}	
-	}
 
 	@AfterMethod
 		public static void tearDownMethod(ITestResult result) {

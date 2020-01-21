@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32476" started-at="2020-01-20T18:06:46 GMT" finished-at="2020-01-20T18:07:18 GMT">
+  <suite name="Default suite" duration-ms="13162" started-at="2020-01-20T18:59:32 GMT" finished-at="2020-01-20T18:59:46 GMT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32476" started-at="2020-01-20T18:06:46 GMT" finished-at="2020-01-20T18:07:18 GMT">
+    <test name="Default test" duration-ms="13162" started-at="2020-01-20T18:59:32 GMT" finished-at="2020-01-20T18:59:46 GMT">
       <class name="com.vtiger.driver.DriverScript">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.vtiger.driver.DriverScript@7c6908d7]" name="setup" is-config="true" duration-ms="113" started-at="2020-01-20T18:06:46 GMT" finished-at="2020-01-20T18:06:46 GMT">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.vtiger.driver.DriverScript@4d95d2a2]" name="setup" is-config="true" duration-ms="102" started-at="2020-01-20T18:59:32 GMT" finished-at="2020-01-20T18:59:32 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="applicationSetup()[pri:0, instance:com.vtiger.driver.DriverScript@7c6908d7]" name="applicationSetup" is-config="true" duration-ms="10706" started-at="2020-01-20T18:06:46 GMT" finished-at="2020-01-20T18:06:56 GMT">
+        <test-method status="PASS" signature="applicationSetup()[pri:0, instance:com.vtiger.driver.DriverScript@4d95d2a2]" name="applicationSetup" is-config="true" duration-ms="12107" started-at="2020-01-20T18:59:33 GMT" finished-at="2020-01-20T18:59:45 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applicationSetup -->
-        <test-method status="FAIL" signature="testcaseExecute(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.vtiger.driver.DriverScript@7c6908d7]" name="testcaseExecute" duration-ms="20829" started-at="2020-01-20T18:06:56 GMT" data-provider="testcasereader" finished-at="2020-01-20T18:07:17 GMT">
+        <test-method status="FAIL" signature="testcaseExecute(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.vtiger.driver.DriverScript@4d95d2a2]" name="testcaseExecute" duration-ms="14" started-at="2020-01-20T18:59:45 GMT" data-provider="testcasereader" finished-at="2020-01-20T18:59:45 GMT">
           <params>
             <param index="0">
               <value>
@@ -36,7 +36,7 @@
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.vtiger.driver.DriverScript.testcaseExecute(DriverScript.java:22)
+at com.vtiger.driver.DriverScript.testcaseExecute(DriverScript.java:19)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -71,18 +71,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcaseExecute -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.vtiger.driver.DriverScript@7c6908d7]" name="tearDownMethod" is-config="true" duration-ms="904" started-at="2020-01-20T18:07:17 GMT" finished-at="2020-01-20T18:07:18 GMT">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.vtiger.driver.DriverScript@4d95d2a2]" name="tearDownMethod" is-config="true" duration-ms="1002" started-at="2020-01-20T18:59:45 GMT" finished-at="2020-01-20T18:59:46 GMT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testcaseExecute status=FAILURE method=DriverScript.testcaseExecute(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.vtiger.driver.DriverScript@7c6908d7] output={null}]]]>
+                <![CDATA[[TestResult name=testcaseExecute status=FAILURE method=DriverScript.testcaseExecute(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.vtiger.driver.DriverScript@4d95d2a2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="finalReport()[pri:0, instance:com.vtiger.driver.DriverScript@7c6908d7]" name="finalReport" is-config="true" duration-ms="287" started-at="2020-01-20T18:07:18 GMT" finished-at="2020-01-20T18:07:19 GMT">
+        <test-method status="PASS" signature="finalReport()[pri:0, instance:com.vtiger.driver.DriverScript@4d95d2a2]" name="finalReport" is-config="true" duration-ms="348" started-at="2020-01-20T18:59:46 GMT" finished-at="2020-01-20T18:59:46 GMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalReport -->
