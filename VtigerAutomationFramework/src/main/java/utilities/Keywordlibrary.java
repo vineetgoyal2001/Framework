@@ -20,14 +20,14 @@ public class Keywordlibrary extends Base{
 				genericobj.closebrowser();
 				break;
 			}
-
-				
-			case "CLICK":{
+		
+			case "CLICKWE":{
+				genericobj.clickwe(Objectkey);
 				break;
 			}
 			
 			case "SETTEXT":{
-			
+			    genericobj.setTextboxValue(Objectkey, Valuekey);
 				break;
 			}		
 }

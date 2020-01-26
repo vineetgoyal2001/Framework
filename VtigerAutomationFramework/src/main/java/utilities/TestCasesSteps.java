@@ -11,12 +11,9 @@ public class TestCasesSteps extends Base{
 	  public static  String[] str_data;		
 	  public static BufferedReader br=null;
 	  
-	  public static void main(String[] args) throws Exception {
-		readTestCaseStepscsv("TC_1");
-	   }
 	  
-      public static void readTestCaseStepscsv(String TID) throws IOException{	   	  
-    	 
+      public  void readTestCaseStepscsv(String TID) throws IOException{	   	  
+    
 		String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcasesteps.csv";
 		br = new BufferedReader(new FileReader(filepath));
 	
@@ -29,8 +26,7 @@ public class TestCasesSteps extends Base{
 					    if(str_data[0].equalsIgnoreCase(TID)) 
 					    {
 					    	while(str_data[2].length()>0) {
-					    		//Keywordlibrary.executeAction(str_data[2], str_data[3], str_data[4]);
-					    		keywordlibraryobj.executeAction(str_data[2], str_data[3], str_data[4]);
+					    	keywordlibraryobj.executeAction(str_data[2], str_data[3], str_data[4]);
 					    		str_newLine=null;
 					    		str_data=null;
 					    		

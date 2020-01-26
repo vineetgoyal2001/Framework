@@ -6,10 +6,8 @@ import utilities.Base;
 public class DriverScript extends Base{
 	 
     @DataProvider(name="testcasereader")
-	public Object[][] gettestcase() throws Exception {
-		
-	     return	testcaseobj.readTestCasecsv();		
-			
+	public Object[][] gettestcase() throws Exception {		
+	     return	testcaseobj.readTestCasecsv();					
 	}
     
     @Test(dataProvider="testcasereader")

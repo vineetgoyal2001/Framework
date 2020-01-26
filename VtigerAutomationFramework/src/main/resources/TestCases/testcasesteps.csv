@@ -1,3 +1,6 @@
 ID,Summary,Action,Object,value
 TC_1,Verify_Valid_Login,openURL,,url
+,,SETTEXT,user_name,uname
+,,SETTEXT,pwd_name,pwd
+,,CLICKWE,Sign_img, 
 ,,CloseBrowser,, 
