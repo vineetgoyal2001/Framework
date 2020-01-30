@@ -1,5 +1,4 @@
 package utilities;
-
 import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
@@ -15,7 +14,6 @@ public class Keywordlibrary extends Base{
 				genericobj.openurl(Valuekey);
 				break;
 			}
-			
 			case "CLOSEBROWSER":{
 				genericobj.closebrowser();
 				break;

@@ -15,9 +15,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import pages.Home;
 import pages.Login;
 import pages.Logout;
-
 public class Base {
-	
 	public static TestDataReader testdata;
 	public static TestObjectReader testobject;
 	public static ConfigReader configobject;
@@ -57,10 +55,8 @@ public class Base {
 			} catch (Exception e) {
 				logger.log(Status.FAIL,"Not able to create the object");
 				Assert.assertTrue(false, "Not able to create the object");
-		}
-		}
+		}}
 	
-
 	@BeforeMethod
 	public void applicationSetup() {		
 	    try {
@@ -87,14 +83,11 @@ public class Base {
 				logger.log(Status.INFO, "Not able to generate report");
 			//	logger.log(Status.FAIL,"Not able to capture screen shot");
 			//	Assert.assertTrue(false, "Not able to capture screen shot");
-
-				
-			}}	
+		}}	
 }
 	@AfterSuite
 	public static void finalReport() {
 		report.flush();
 		//driver.close();
-	}
-	
+	}	
 }

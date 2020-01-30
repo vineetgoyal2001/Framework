@@ -13,8 +13,7 @@ public class TestCasesSteps extends Base{
 	  
 	  
       public  void readTestCaseStepscsv(String TID) throws IOException{	   	  
-    
-		String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcasesteps.csv";
+    	String filepath=System.getProperty("user.dir")+"/src/main/resources/TestCases/testcasesteps.csv";
 		br = new BufferedReader(new FileReader(filepath));
 	
 			br.readLine();

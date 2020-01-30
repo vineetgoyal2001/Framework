@@ -66,11 +66,7 @@ public class Excelfunction extends Base {
 	    while ((line = br.readLine()) != null) {
 	        // use comma as separator
 	        String[] cols = line.split(",");
-	    //    for(int i=0;i<cols.length;i++) {
-	        	System.out.println(cols[0]);
-	    //    }
+	        System.out.println(cols[0]);
 	    }
 	}
-
-	
 }
