@@ -1,5 +1,7 @@
 package utilities;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
@@ -15,6 +17,8 @@ public class GenericMethod extends Base{
 			Assert.assertTrue(false, "Not able to mouse over the element");
 		}
 		}
+	
+
 
 	public void openurl(String val) {
 		try {
@@ -59,11 +63,36 @@ public class GenericMethod extends Base{
 		 try {
 			testobject.getObject(objkey).isSelected();
 		} catch (Exception e) {
-			logger.log(Status.FAIL,"Not able to input the value");
-			Assert.assertTrue(false, "Not able to input the value");
+			logger.log(Status.FAIL,"Not able to select the value");
+			Assert.assertTrue(false, "Not able to select the value");
 		}
 		 	 }
- 
+	 
+		public void selectByText(String objkey,String datakey) {
+			try {
+				
+				WebElement weColor=testobject.getObject(objkey);
+				Select setColor=new Select(weColor);
+				setColor.selectByVisibleText(testdata.getData(datakey));
+			} catch (Exception e) {
+				logger.log(Status.FAIL,"Not able to select the element by text");
+				Assert.assertTrue(false, "Not able to select the element by text");
+			}
+			}
+		
+		public void selectByValue(String objkey,String datakey) {
+			try {
+				WebElement weColor=testobject.getObject(objkey);
+				Select setColor=new Select(weColor);
+				setColor.selectByValue(testdata.getData(datakey));
+
+			} catch (Exception e) {
+				logger.log(Status.FAIL,"Not able to select the element by value");
+				Assert.assertTrue(false, "Not able to select the element by value");
+			}
+			}
+
+		
 	 public void validateElementPresent(String objkey) {
 		 
 	 }
@@ -108,6 +137,9 @@ public class GenericMethod extends Base{
 			Assert.assertTrue(false, "Not able to input the value");
 			}
 	}
+	
+	
+	
 	public void validateInnerText(String objkey,String datakey) {
 		try {
 			String exptest=testobject.getObject(objkey).getText();
@@ -117,7 +149,6 @@ public class GenericMethod extends Base{
 			else
 				   	System.out.println(objkey+ " Text Verification is failed");
 		} catch (Exception e) {
-			//logger.fail("Not able to validate inner text");	
 			logger.log(Status.FAIL,"Not able to validate the inner text");
 			Assert.assertTrue(false, "Not able to validate the inner text");
 			}

@@ -48,6 +48,7 @@ public class Base {
 			excelobj=new Excelfunction();
 			testcaseobj=new TestCasesReader();
 			keywordlibraryobj=new Keywordlibrary();
+			testcasestepobj=new TestCasesSteps();
 			CSS=new CaptureScreenShot();
 			extent=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Report/Vtiger"+CSS.getCurrentDateTime()+".html"));
             report=new ExtentReports();

@@ -4,3 +4,14 @@ TC_1,Verify_Valid_Login,openURL,,url
 ,,SETTEXT,pwd_name,pwd
 ,,CLICKWE,Sign_img, 
 ,,CloseBrowser,, 
+
+TC_2,Verify_Valid_LoginWithColAndLang,openURL,,url
+,,SETTEXT,user_name,uname
+,,SETTEXT,pwd_name,pwd
+,,CLICKWE,colorTheme, 
+,,SELECT,,color
+,,CLICKWE,language, 
+,,SELECT,,language
+,,CLICKWE,Sign_img, 
+,,CloseBrowser,, 
+

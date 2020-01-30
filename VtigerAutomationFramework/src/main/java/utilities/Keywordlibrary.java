@@ -27,7 +27,13 @@ public class Keywordlibrary extends Base{
 			case "SETTEXT":{
 			    genericobj.setTextboxValue(Objectkey, Valuekey);
 				break;
+			}	
+			
+			case "SELECT":{
+			    genericobj.selectByText(Objectkey, Valuekey);
+				break;
 			}		
+
 }
 		} catch (Exception e) {
 			logger.log(Status.FAIL,"Not able to read test steps");
